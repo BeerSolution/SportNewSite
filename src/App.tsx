@@ -1,7 +1,13 @@
-import React from "react";
+import { SideBar } from './components';
 
-function App() {
-    return <div className="App"></div>;
-}
+import './styles/App.scss';
+
+const App = () => {
+  return (
+    <div className='App'>
+      <SideBar />
+    </div>
+  );
+};
 
 export default App;

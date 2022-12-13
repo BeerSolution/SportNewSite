@@ -1,0 +1,84 @@
+@import '../../styles/Colors.scss';
+
+.sidebar {
+  width: 83px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+
+  &-list {
+    margin-top: 78px;
+  }
+
+  &-item {
+    width: 253px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 65px;
+    text-decoration: none;
+    color: $greyCloud;
+    position: relative;
+    user-select: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $persianRed;
+
+      &::before {
+        content: '•';
+        scale: 1.5;
+        position: absolute;
+        left: 53px;
+      }
+      &:active {
+        &::after {
+          content: '';
+          height: 40px;
+          width: 6px;
+          background-color: $alizarinCrimson;
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &-follow {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    user-select: none;
+    color: $greyCloud;
+    width: 60px;
+    height: 98px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px 0 0 65px;
+
+    &-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 60px;
+      height: 60px;
+
+      &-contain {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &-item {
+        cursor: pointer;
+        &:hover * {
+          fill: $alizarinCrimson;
+        }
+      }
+    }
+  }
+}
